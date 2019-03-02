@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
+  <script type="text/javascript" src="{% static 'home/script.js' %}"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  {% block head %}
+  <title>WDCT</title>
+  {% endblock %}
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+
+      <div class="logo">
+         <img src="{% static 'home/logo.png' %}" class="logo-image" height="50vh">
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">FESTS</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li id="login" class="active"><a href="login">Login</a></li>
+          <li id="reg" class="active"><a href="register">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  {% block body %}
+  {% endblock %}
+</body>
+</html>

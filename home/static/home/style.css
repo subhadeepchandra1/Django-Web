@@ -1,0 +1,111 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body{
+  font-family: Quicksand;
+}
+
+.logo{
+  position: fixed;
+  float: left;
+  top: 1vh;
+  left: 1vh;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+}
+
+nav ul{
+  list-style: none;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  transition: 1s;
+}
+
+nav.black ul{
+  background: #222;
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+nav ul li.active{
+  background: #E2472F;
+  color: #fff;
+  border-radius: 6px;
+  float: right;
+  padding: 1vh;
+  margin: 3vh;
+}
+
+.menu-icon{
+  width: 100%;
+  background: #000;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+.content{
+  padding: 10vh;
+}
+
+@media(max-width:580px) {
+  .logo{
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
+
+  nav ul{
+    max-height: 0px;
+    background: #000;
+  }
+
+  nav.black ul{
+    background: #000;
+  }
+
+  .showing{
+    max-height: 20em;
+  }
+
+  nav ul li{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  .menu-icon{
+    display: block;
+  }
+
+  .logo-image{
+    height: 4vh;
+  }
+
+  .content{
+    padding: 2vh;
+  }
+}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% block head %}
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'home/login.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block body %}
+  <div class="signin">
+    <form method="post">
+      {% csrf_token %}
+      <h2>Sign In</h2>
+      {{form.as_p}}
+      <!--<input type="text" name="" value="" placeholder="Enter Usename">
+      <input type="text" name="" value="" placeholder="Enter Password">
+    -->
+      <button class="btn" type="submit">Sign In</button>
+    </form>
+  </div>
+  {% endblock %}
+</body>
+</html>

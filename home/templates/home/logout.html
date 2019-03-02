@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% block head %}
+  <title>Logout</title>
+  <link rel="stylesheet" href="{% static 'home/login.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block body %}
+  <h1 style="margin-top:140px;text-align:center;;">You have successfully logged out.</h1>
+  {% endblock %}
+</body>
+</html>
