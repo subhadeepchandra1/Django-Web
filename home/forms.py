@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm,UserChangeForm
 
 class RegistrationForm(UserCreationForm):
     """docstring for RegistrationForm."""
@@ -28,3 +28,15 @@ class RegistrationForm(UserCreationForm):
             user.save()
 
         return user
+
+class EditProfileForm(UserChangeForm):
+    """docstring for EditProfileForm."""
+    class Meta:
+        model=User
+        fields=(
+        'username',
+        'first_name',
+        'last_name',
+        'email',
+        'password',
+        )
