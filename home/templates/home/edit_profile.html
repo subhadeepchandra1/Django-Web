@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block head %}
-<title>Register</title>
+<title>Edit</title>
 <link rel="stylesheet" href="{% static 'home/reg.css' %}">
 {% endblock %}
 
 {% block body %}
-<div class="signin" style="margin-top:200px;margin-bottom:10px;z-index:-5">
+<div class="signin" style="margin-top:500px;margin-bottom:10px;z-index:-5">
   <h1>Register</h1>
   <form method="post">
     {% csrf_token %}
