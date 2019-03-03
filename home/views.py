@@ -51,6 +51,9 @@ def change_password(request):
             form.save()
             return redirect('profile')
 
+        else:
+            return redirect('change-password')
+
     else:
         form=PasswordChangeForm(user=request.user)
         args={'form':form}
